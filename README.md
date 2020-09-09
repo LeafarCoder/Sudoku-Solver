@@ -9,14 +9,33 @@ For simplicity, a GUI was not implemented.
 
 The problem grid can be inputed in the Main class.
 
+Author:
+* [Rafael Correia](https://sourcerer.io/leafarcoder)
+
+# Examples
+
+### Easy (2X2)
+Solved in 0.000s (not enough precision)
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_2x2_sudoku.PNG)
 
+### Easy (3x2)
+Solved in 0.006s
+
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_3x2_sudoku.PNG)
+
+### Easy (3x3)
+Solved in 0.000s
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_3x3_sudoku.PNG)
 
+### Intermediate (3x3)
+Solved in 0.375s
+
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/intermediate_3x3_sudoku.PNG)
+
+### "Hardest sudoku" (3x3)
+Solved in 0.712s (not enough precision)
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/hardest_3x3_sudoku.PNG)
 
@@ -24,4 +43,4 @@ The problem grid can be inputed in the Main class.
 
 
 # License
-This project is under [MIT License](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/License).
+This project is under [MIT License](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/LICENSE).
