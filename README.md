@@ -19,20 +19,28 @@ Solved in 0.000s (not enough precision)
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_2x2_sudoku.PNG)
 
+---
+
 ### Easy (3x2)
 Solved in 0.006s
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_3x2_sudoku.PNG)
 
+---
+
 ### Easy (3x3)
-Solved in 0.000s
+Solved in 0.004s
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_3x3_sudoku.PNG)
+
+---
 
 ### Intermediate (3x3)
 Solved in 0.375s
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/intermediate_3x3_sudoku.PNG)
+
+---
 
 ### "Hardest sudoku" (3x3)
 Solved in 0.712s (not enough precision)
