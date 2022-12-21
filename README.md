@@ -15,7 +15,7 @@ Author:
 # Examples
 
 ### Easy (2X2)
-Solved in 0.000s (not enough precision)
+Solved in 0.000s (insufficient precision)
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_2x2_sudoku.PNG)
 
