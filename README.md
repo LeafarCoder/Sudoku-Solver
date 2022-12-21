@@ -45,7 +45,7 @@ Solved in 0.375s
 ### "Hardest" (3x3)
 This puzzle was created in 2012 by a Finish mathematicion called Arto Inkala and is said to be the [hardest](https://www.conceptispuzzles.com/index.aspx?uri=info/article/424) 3x3 sudoku puzzle ever.
 
-Solved in 0.712s (not enough precision)
+Solved in 0.712s
 
 ![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/hardest_3x3_sudoku.PNG)
 
