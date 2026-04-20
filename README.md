@@ -1,55 +1,73 @@
-# Sudoku-Solver
-A Sudoku solver for any grid size.
+# Sudoku Solver
 
-The grid sizes ```sizeX``` and ```sizeY``` refer to the smaller rectangle and not the total grid size.
-This is because the small cells don't need to be squares and its size defines the size of the total grid.
+A command-line Sudoku solver written in Java that works for any rectangular grid size — not just the standard 9×9.
 
-The main goal was to design the solving algorithm.
-For simplicity, a GUI was not implemented. 
+The focus of this project was the solving algorithm itself: constraint propagation combined with backtracking and a most-constrained-variable heuristic. No GUI, just clean terminal output showing the problem and solution side by side.
 
-The problem grid can be inputed in the Main class.
+## How it works
 
-Author:
-* [Rafael Correia](https://sourcerer.io/leafarcoder)
+The solver uses two techniques together:
 
-# Examples
+1. **Constraint propagation** — repeatedly eliminates impossible values from each cell based on what's already placed in its row, column, and box. This alone solves most easy puzzles.
+2. **Backtracking** — when propagation gets stuck, the solver picks the cell with the fewest remaining candidates, makes a guess, and backtracks if it leads to a contradiction.
 
-### Easy (2X2)
-Solved in 0.000s (insufficient precision)
+## Grid sizes
 
-![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_2x2_sudoku.PNG)
+`sizeX` and `sizeY` define the dimensions of the **small rectangle**, not the full grid. The full grid is always `(sizeX × sizeY)` cells wide and tall.
 
----
+| sizeX | sizeY | Full grid |
+|-------|-------|-----------|
+| 2 | 2 | 4×4 |
+| 3 | 2 | 6×6 |
+| 3 | 3 | 9×9 (standard) |
 
-### Easy (3x2)
-Solved in 0.006s
+## Running it
 
-![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_3x2_sudoku.PNG)
+No build tools required. Compile and run with:
 
----
+```bash
+javac -d bin src/sudoku/*.java
+java -cp bin sudoku.Main
+```
 
-### Easy (3x3)
-Solved in 0.004s
+Puzzles are hardcoded in `Main.java`. Change the `difficulty` variable to switch between the included examples (0 = Easy, 1 = Intermediate, 2 = Difficult, 3 = Insane).
 
-![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/easy_3x3_sudoku.PNG)
+## Examples
 
----
+### Easy — 2×2 grid (4×4)
 
-### Intermediate (3x3)
-Solved in 0.375s
-
-![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/intermediate_3x3_sudoku.PNG)
+<img src="Images/easy_2x2_sudoku.PNG" width="380"/>
 
 ---
 
-### "Hardest" (3x3)
-This puzzle was created in 2012 by a Finish mathematicion called Arto Inkala and is said to be the [hardest](https://www.conceptispuzzles.com/index.aspx?uri=info/article/424) 3x3 sudoku puzzle ever.
+### Easy — 3×2 grid (6×6)
 
-Solved in 0.712s
-
-![](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/Images/hardest_3x3_sudoku.PNG)
+<img src="Images/easy_3x2_sudoku.PNG" width="440"/>
 
 ---
 
-# License
-This project is under [MIT License](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/LICENSE).
+### Easy — 3×3 grid (9×9)
+
+<img src="Images/easy_3x3_sudoku.PNG" width="560"/>
+
+---
+
+### Intermediate — 3×3 grid (9×9)
+
+<img src="Images/intermediate_3x3_sudoku.PNG" width="560"/>
+
+---
+
+### "The Hardest" — 3×3 grid (9×9)
+
+Created in 2012 by Finnish mathematician Arto Inkala, [widely considered](https://www.conceptispuzzles.com/index.aspx?uri=info/article/424) one of the hardest Sudoku puzzles ever designed.
+
+Solved in **0.712s**.
+
+<img src="Images/hardest_3x3_sudoku.PNG" width="560"/>
+
+---
+
+## License
+
+[MIT](https://github.com/LeafarCoder/Sudoku-Solver/blob/master/LICENSE) — Rafael Correia
